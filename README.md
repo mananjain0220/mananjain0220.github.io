@@ -10,6 +10,7 @@
 My Designs:
 
 - [E-StoreMobile App](https://www.figma.com/proto/5IBNZaiM0WFbbdpXFrB0kP/E-StoreMobile-App-wireframe?node-id=27%3A20&scaling=scale-down&page-id=27%3A19&starting-point-node-id=27%3A20)
+- [Weather App](https://www.figma.com/proto/jxhLV9V45UtNFL2MdSZCUT/Wether-app-protoype?node-id=1%3A3&scaling=scale-down&page-id=0%3A1&starting-point-node-id=1%3A3)
 
 My Medium Blog:
 1. [TOOLTIP AND TAB COMPLETION IN JUPYTER NOTEBOOK](https://medium.com/@mananjain0/tooltip-and-tab-completion-in-jupyter-notebook-8dc813e05208)
