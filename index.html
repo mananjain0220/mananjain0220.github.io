@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Manan Jain — Research Associate with experience in security research, applied machine learning, explainable AI, and software engineering.">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-GqsWfEjHm73zbHa7lGbVXfv95jxypKuCtjd6kntjIRA='; style-src 'self'; img-src 'self' data: blob:; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta name="theme-color" content="#f6f3ec">
+  <link rel="canonical" href="https://mananjain0220.github.io/">
+  <title>Manan Jain — Machine Learning &amp; Security Research</title>
+  <link rel="stylesheet" href="./style.css?v=palette-1">
+  <script type="importmap">{"imports":{"three":"./vendor/three.module.js"}}</script>
+  <script type="module" src="./main.js?v=palette-1"></script>
+</head>
+<body data-mode="home">
+  <header class="masthead">
+    <a class="identity" href="./" aria-label="Manan Jain — home">MANAN JAIN <span>↗</span></a>
+    <span class="header-context" id="header-context">RESEARCH ASSOCIATE</span>
+    <nav class="profile-links" aria-label="Profile links">
+      <a href="https://github.com/mananjain0220/" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+      <a href="https://scholar.google.com/citations?user=7O2b0YAAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Scholar ↗</a>
+      <a href="https://www.linkedin.com/in/mananjain0220/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+    </nav>
+  </header>
+
+  <div class="world" id="world">
+    <canvas id="scene" tabindex="0" aria-describedby="preview-description" aria-label="Interactive MacBook. The screen illustrates selected work. Screen tabs select a preview; click the preview or a sticker to open details. Keys 1, 2 and 3 open security research, applied ML, and engineering. Enter opens selected work. Arrow keys rotate. The same work is available in the text buttons."></canvas>
+    <p class="sr-only" id="preview-description">Illustration: observations are compared with a baseline before attribution. No measured detector output is shown.</p>
+    <div class="vignette" aria-hidden="true"></div>
+    <div class="scene-top" aria-hidden="true"><span id="scene-label">THE WORKSPACE</span><span id="scene-number">00</span></div>
+    <div class="scene-hint" id="scene-hint">Loading the workspace…</div>
+    <div class="view-controls" id="view-controls" role="group" aria-label="Laptop view">
+      <div class="view-switch"><button data-view="front" aria-pressed="true">Screen</button><button data-view="back" aria-pressed="false">Stickers</button></div>
+      <button class="reset-view" id="reset-view" aria-label="Reset laptop view" title="Reset view">↺</button>
+      <button class="motion-toggle" id="motion-toggle" aria-pressed="false" aria-label="Reduce motion">Motion <span aria-hidden="true">on</span></button>
+    </div>
+    <div class="transition-veil" id="transition-veil" aria-hidden="true"></div>
+    <div class="fallback" id="fallback" hidden><p>The 3D view is unavailable.</p><button class="primary" id="read-case">Read the case <span>↗</span></button></div>
+  </div>
+
+  <svg class="annotation-link" id="annotation-link" aria-hidden="true">
+    <path id="annotation-path"></path>
+    <circle id="annotation-ring" r="8"></circle>
+    <circle id="annotation-dot" r="2.5"></circle>
+  </svg>
+  <div class="paper-grain" aria-hidden="true"></div>
+
+  <main>
+    <section class="home" id="home" aria-labelledby="home-title">
+      <div class="home-copy">
+        <p class="eyebrow">BUILD · EVALUATE · INVESTIGATE</p>
+        <h1 id="home-title"><span>Machine learning.</span> <em>Security research.</em></h1>
+        <p class="intro">Research Associate at MLU Halle-Wittenberg, with a background in applied ML and software engineering.</p>
+        <nav class="work-index" aria-label="Selected experience">
+          <button class="work-entry" data-panel="research" aria-haspopup="dialog" aria-controls="details">
+            <span class="work-number" aria-hidden="true">01</span><span><strong>Security research</strong><small>ATTRIBUT · Detection &amp; attribution</small></span><span class="work-arrow" aria-hidden="true">↗</span>
+          </button>
+          <button class="work-entry" data-panel="ml" aria-haspopup="dialog" aria-controls="details">
+            <span class="work-number" aria-hidden="true">02</span><span><strong>Applied ML &amp; XAI</strong><small>Multimodal learning · EvoLearner</small></span><span class="work-arrow" aria-hidden="true">↗</span>
+          </button>
+          <button class="work-entry" data-panel="engineering" aria-haspopup="dialog" aria-controls="details">
+            <span class="work-number" aria-hidden="true">03</span><span><strong>Software &amp; testing</strong><small>CHECK24 · dSPACE</small></span><span class="work-arrow" aria-hidden="true">↗</span>
+          </button>
+        </nav>
+        <div class="profile-footnotes">
+          <button class="credential-link" data-panel="foundations" aria-haspopup="dialog"><span class="credential-mark" aria-hidden="true">CC</span><span>ISC2 Certified in Cybersecurity <span aria-hidden="true">↗</span></span></button>
+          <button class="direction-link" data-panel="direction" aria-haspopup="dialog">Developing toward AI / ML security <span aria-hidden="true">↗</span></button>
+          <p class="inspiration-credit">Inspired by <a href="https://about.senbuzy.com/" target="_blank" rel="noopener noreferrer">About Sen ↗</a></p>
+        </div>
+      </div>
+    </section>
+
+    <div class="case-story" id="case-story" hidden>
+      <div class="entry-runway" id="entry-runway" aria-hidden="true"></div>
+      <section class="chapter" id="surface" data-step="0" aria-labelledby="surface-title">
+        <div class="chapter-copy">
+          <p class="eyebrow">RESEARCH CASE · 01 / OBSERVATION</p>
+          <h2 id="surface-title" tabindex="-1">A page. <br>Not the <br><em>whole file.</em></h2>
+          <p class="lead">The rendered page is one view. Its underlying structure is another.</p>
+          <button class="caption-anchor" data-artifact="0" aria-label="Highlight the rendered page">The rendered page <span class="anchor-dot" aria-hidden="true"></span></button>
+          <p class="specimen-note">One example from my security research. A synthetic specimen, not a live detector.</p>
+        </div>
+      </section>
+      <section class="chapter" id="structure" data-step="1" aria-labelledby="structure-title">
+        <div class="chapter-copy">
+          <p class="eyebrow">02 / ANALYSIS REPORT</p>
+          <h2 id="structure-title">What the file <br><em>reveals.</em></h2>
+          <p class="lead">A report turns low-level observations into a readable evidence trail.</p>
+          <section class="finding-report" aria-label="Illustrative PDF analysis report" aria-describedby="report-note">
+            <div class="finding-summary">
+              <strong>14</strong>
+              <div><span>observed findings</span><small>PDF report example · static analysis</small></div>
+            </div>
+            <details class="finding-group" open>
+              <summary><span>Content &amp; links</span><span class="finding-count">5 <span class="sr-only">findings</span></span><span class="finding-toggle" aria-hidden="true"></span></summary>
+              <ul class="finding-list" role="list">
+                <li>Contains an HTTP refresh header</li>
+                <li>Found URL in the content of a PDF</li>
+                <li>PDF contains a single clickable URL in its embedded content</li>
+                <li>Found a base64 encoded http(s) URL prefix</li>
+                <li>Contains Base64-encoded strings</li>
+              </ul>
+            </details>
+            <details class="finding-group">
+              <summary><span>File structure</span><span class="finding-count">6 <span class="sr-only">findings</span></span><span class="finding-toggle" aria-hidden="true"></span></summary>
+              <ul class="finding-list" role="list">
+                <li>PDF contains a single page and no characters</li>
+                <li>PDF contains less than 1.6KB of semantic information</li>
+                <li>PDF contains pages without extractable text</li>
+                <li>PDF does not contain embedded JavaScript</li>
+                <li>PDF does not contain embedded files</li>
+                <li>PDF does not contain interactive streams</li>
+              </ul>
+            </details>
+            <details class="finding-group">
+              <summary><span>Heuristic signals</span><span class="finding-count">3 <span class="sr-only">findings</span></span><span class="finding-toggle" aria-hidden="true"></span></summary>
+              <ul class="finding-list" role="list">
+                <li>Contains references to companies often used in phishing context</li>
+                <li>Contains data with a high entropy</li>
+                <li>Defense Evasion: Software Packing</li>
+              </ul>
+            </details>
+          </section>
+          <button class="caption-anchor" data-artifact="1" aria-label="Highlight the object structure">The object structure <span class="anchor-dot" aria-hidden="true"></span></button>
+          <p class="support" id="report-note">Illustrative report—not a live scan, a verified analysis of the rendered specimen, or proof of malicious intent.</p>
+        </div>
+      </section>
+      <section class="chapter" id="inference" data-step="2" aria-labelledby="inference-title">
+        <div class="chapter-copy">
+          <p class="eyebrow">03 / INFERENCE</p>
+          <h2 id="inference-title">Observation <br>isn’t yet <br><em>evidence.</em></h2>
+          <p class="lead">Is a signal present? What produced it? Baselines and failure cases test the answers.</p>
+          <button class="caption-anchor" data-artifact="2" aria-label="Highlight the evaluation note">The evaluation note <span class="anchor-dot" aria-hidden="true"></span></button>
+          <div class="proof-links">
+            <a href="https://link.springer.com/chapter/10.1007/978-3-032-35586-7_11" target="_blank" rel="noopener noreferrer">Research chapter ↗</a>
+            <a href="https://github.com/mananjain0220/pdf-steganalysis-corpus" target="_blank" rel="noopener noreferrer">Public corpus ↗</a>
+          </div>
+        </div>
+      </section>
+      <div class="exit-runway" id="exit-runway" aria-hidden="true"></div>
+    </div>
+  </main>
+
+  <nav class="layer-nav" id="layer-nav" aria-label="Case layers" hidden>
+    <button data-step-to="0" aria-current="step"><span>01</span> Surface</button>
+    <button data-step-to="1"><span>02</span> Report</button>
+    <button data-step-to="2"><span>03</span> Inference</button>
+  </nav>
+  <div class="tooltip" id="tooltip" hidden></div>
+  <p class="sr-only" id="status" role="status" aria-live="polite"></p>
+  <dialog id="details" aria-labelledby="detail-title">
+    <div class="dialog-header"><span id="detail-kicker"></span><button id="close-details" aria-label="Close details">×</button></div>
+    <div id="detail-content"><h2 id="detail-title" tabindex="-1"></h2><div id="detail-body"></div></div>
+    <nav class="detail-nav" id="detail-nav" aria-label="Browse work areas" hidden></nav>
+  </dialog>
+  <noscript><p class="noscript">Interactive details require JavaScript. <a href="https://github.com/mananjain0220/">GitHub</a> · <a href="https://scholar.google.com/citations?user=7O2b0YAAAAAJ&amp;hl=en">Research on Scholar</a></p></noscript>
+</body>
+</html>
