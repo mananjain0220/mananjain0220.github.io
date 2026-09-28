@@ -22,7 +22,7 @@ export const workAreas = {
     },
   },
   engineering: {
-    title: 'Software & testing', subtitle: 'CHECK24 / dSPACE',
+    title: 'Engineering', subtitle: 'CHECK24 / dSPACE',
     sticker: 'build-test',
     preview: {
       title: 'Build. Test. Refine.', label: 'BUILD / TEST',
@@ -37,14 +37,18 @@ export const panels = {
     kicker: '01 / SECURITY RESEARCH', title: 'Finding what is hidden.',
     text: 'As a Research Associate at MLU Halle-Wittenberg, I work on detection and attribution of hidden information in ATTRIBUT.',
     entries: [
-      {title: 'My contribution', text: 'Statistical and ML methods, attribution tools, and research reporting.'},
+      {
+        title: 'From research to a public benchmark',
+        text: 'Lead author of research on PDF steganography, detection and attribution, with a public companion corpus, validation tools and reproducible baselines.',
+        links: [
+          {label: 'Read the chapter ↗', href: 'https://link.springer.com/chapter/10.1007/978-3-032-35586-7_11'},
+          {label: 'Explore the dataset ↗', href: 'https://huggingface.co/datasets/manj0220/pdf-steganalysis-corpus'},
+          {label: 'View the code ↗', href: 'https://github.com/mananjain0220/pdf-steganalysis-corpus'},
+        ],
+      },
       {title: 'One example: document signals', text: 'The interactive case illustrates the questions behind this work. It is a synthetic walkthrough, not a live detector or an evaluation result.'},
     ],
     caseAction: 'Explore the document case',
-    links: [
-      {label: 'Research chapter ↗', href: 'https://link.springer.com/chapter/10.1007/978-3-032-35586-7_11'},
-      {label: 'Public corpus ↗', href: 'https://github.com/mananjain0220/pdf-steganalysis-corpus'},
-    ],
   },
   ml: {
     kicker: '02 / APPLIED ML & EXPLAINABLE AI', title: 'Build models. Test ideas.',

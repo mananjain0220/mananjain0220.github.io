@@ -2,7 +2,7 @@ import * as THREE from 'three';
 import { GLTFLoader } from './vendor/GLTFLoader.js';
 import { makeLaptopMark, makeContactShadow } from './textures.js';
 import { createEvidence } from './evidence.js?v=palette-1';
-import { panels, workAreas, workOrder, screenLayout, screenActionAt } from './profile.js?v=workspace-1';
+import { panels, workAreas, workOrder, screenLayout, screenActionAt } from './profile.js?v=research-proof-1';
 import { drawWorkspacePreview, drawWorkspaceSticker } from './workspace-art.js?v=palette-1';
 import { springStep, nearestAngle, releaseTravel, portalState } from './motion.js';
 import { createSceneTransition } from './transition.js';
@@ -96,7 +96,7 @@ function updateUI(inCase) {
   $('#layer-nav').hidden = !inCase;
   $('#view-controls').hidden = inCase;
   $('.profile-links').hidden = inCase;
-  $('#header-context').textContent = inCase ? 'CASE 01 / DOCUMENT SIGNALS' : 'RESEARCH ASSOCIATE';
+  $('#header-context').textContent = inCase ? 'CASE 01 / DOCUMENT SIGNALS' : 'RESEARCH ASSOCIATE · SECURITY & ML';
   canvas.setAttribute('aria-label', inCase
     ? 'Three-dimensional document layers. Scroll to explore. Scroll back above the first layer or past the final layer to return to the laptop. Escape also returns. Drag or use arrow keys to rotate.'
     : homeCanvasLabel);
@@ -263,6 +263,17 @@ function selectWork(id) {
   }
   dirty = true;
 }
+function appendDetailLinks(parent, links, label) {
+  if (!links?.length) return;
+  const nav = document.createElement('nav'); nav.className = 'detail-links';
+  nav.setAttribute('aria-label', label);
+  for (const link of links) {
+    const a = document.createElement('a');
+    a.href = link.href; a.textContent = link.label; a.target = '_blank'; a.rel = 'noopener noreferrer';
+    nav.append(a);
+  }
+  parent.append(nav);
+}
 function openPanel(id) {
   const data = panels[id];
   if (!data || mode !== 'home' || panelClosing) return;
@@ -282,7 +293,9 @@ function openPanel(id) {
     const section = document.createElement('section'); section.className = 'detail-entry';
     const title = document.createElement('h3'); title.textContent = entry.title;
     const p = document.createElement('p'); p.textContent = entry.text;
-    section.append(title, p); body.append(section);
+    section.append(title, p);
+    appendDetailLinks(section, entry.links, entry.title);
+    body.append(section);
   }
   if (data.items) {
     const ul = document.createElement('ul');
@@ -298,15 +311,7 @@ function openPanel(id) {
     button.addEventListener('click', () => closePanel(() => changeMode(true)));
     body.append(button);
   }
-  if (data.links) {
-    const links = document.createElement('div'); links.className = 'detail-links';
-    for (const link of data.links) {
-      const a = document.createElement('a');
-      a.href = link.href; a.textContent = link.label; a.target = '_blank'; a.rel = 'noopener noreferrer';
-      links.append(a);
-    }
-    body.append(links);
-  }
+  appendDetailLinks(body, data.links, data.title);
   const nav = $('#detail-nav'); nav.replaceChildren(); nav.hidden = !workAreas[id];
   if (workAreas[id]) {
     const index = workOrder.indexOf(id);
